@@ -1,0 +1,6 @@
+Most of the charts are easy to understand, but not all of the code provide in the examples are not needed.
+It mostly depends on how the information is structured in the .csv file will dictate how the code looks.
+In general which chart you used to depict date depends on the data given to the programmer.
+For me in general, I prefer line and bar graphs over heat and bubble graphs.
+The most complex graph for reading for me is the bubble map, which is only useful for interactive maps, this is because
+it groups data rather than it being in a x vs y format.
