@@ -3,7 +3,10 @@ import plotly.graph_objs as go
 import pandas as pd
 # Load CSV file from Datasets folder
 df = pd.read_csv('Datasets/CoronaTimeSeries.csv')
-# Preparing data
+
+# Prepares data by setting the x axis to day of week, y to the week of month,
+# and z as the color which corresponds to how many recovered. The color is also
+# set to the Jet gradient scale.
 data = [go.Heatmap(x=df['Day'],
 y=df['WeekofMonth'],
 z=df['Recovered'].values.tolist(),

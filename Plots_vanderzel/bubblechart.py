@@ -11,7 +11,8 @@ df = df[(df['Country'] != 'China') & (df['Country'] != 'Others')]
 # Creating sum of number of cases group by Country Column
 new_df = df.groupby(['Country']).agg(
 {'Confirmed': 'sum', 'Recovered': 'sum', 'Unrecovered': 'sum'}).reset_index()
-# Preparing data
+
+# Prepares data by setting x axis to recovered, y axis to unrecovererd, and the size to confirmed cases
 data = [
 go.Scatter(x=new_df['Recovered'],
 y=new_df['Unrecovered'],

@@ -17,7 +17,7 @@ new_df = filtered_df.groupby(['State'])['Confirmed'].sum().reset_index()
 # Sorting values and select first 20 states
 new_df = new_df.sort_values(by=['Confirmed'], ascending=[False]).head(20)
 
-# Preparing data
+# Prepares data by setting the axes to the columns and corresponding rows
 data = [go.Bar(x=new_df['State'], y=new_df['Confirmed'])]
 
 # Preparing layout

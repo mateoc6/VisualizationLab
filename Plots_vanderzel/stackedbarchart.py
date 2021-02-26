@@ -15,7 +15,8 @@ new_df = df.groupby(['Country']).agg(
 # Sorting values and select 20 first value
 new_df = new_df.sort_values(by=['Confirmed'],
     ascending=[False]).head(20).reset_index()
-# Preparing data
+# Prepares data by adding 3 bar sets with the x axis being country, y axis being
+# unrecovered, recovered, or deaths. They are stacked on each other with different colors
 trace1 = go.Bar(x=new_df['Country'], y=new_df['Unrecovered'], name='Unrecovered',
     marker={'color': '#CD7F32'})
 trace2 = go.Bar(x=new_df['Country'], y=new_df['Recovered'], name='Recovered',
